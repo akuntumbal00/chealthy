@@ -39,10 +39,12 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://34.125.183.122/",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
+    "http://34.125.183.122/"
 ]
 
 # Application definition
@@ -85,7 +87,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cHealthy.wsgi.application'
+WSGI_APPLICATION = 'cHealthy.wsgi.app'
 
 
 # Database
