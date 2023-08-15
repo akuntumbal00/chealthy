@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-eekj2yh$@xt%0mx@@!yi(8$bjwmq*h_1t!_&ru&t@!e&5iz#(q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -39,12 +39,10 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "http://34.125.183.122/",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
-    "http://34.125.183.122/"
 ]
 
 # Application definition
@@ -57,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'classification',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -87,7 +86,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'cHealthy.wsgi.app'
+WSGI_APPLICATION = 'cHealthy.wsgi.application'
 
 
 # Database
@@ -138,7 +137,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT =os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
