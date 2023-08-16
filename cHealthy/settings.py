@@ -39,10 +39,12 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    'https://chealthybackend.applikuapp.com/'
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:3000",
+    'https://chealthybackend.applikuapp.com/'
 ]
 
 # Application definition
